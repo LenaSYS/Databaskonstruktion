@@ -1,0 +1,15 @@
+USE a00leifo;
+
+-- Trigger for logging new invoices. Assumes same log table as in previous example
+
+DELIMITER //
+
+CREATE TRIGGER LOGGTRIGGER AFTER INSERT ON INVOICEROW 
+FOR EACH ROW BEGIN 
+   INSERT INTO INVOICEROWLOG(OPERATION,USERNAME,PRODUCT,OPTIME) 
+      VALUES("INS",USER(),NEW.PRODUCT,NOW());
+END;
+
+//
+
+DELIMITER ;

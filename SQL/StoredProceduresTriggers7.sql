@@ -1,0 +1,24 @@
+USE a00leifo
+DROP TABLE CATEGORYSUM;
+DROP TRIGGER updatesum;
+
+CREATE TABLE CATEGORYSUM(
+    PRODUCT INTEGER,
+		PRODUCTNAME VARCHAR(30),
+    COST REAL
+);
+
+DELIMITER //
+
+-- Materialized view update view
+
+CREATE TRIGGER updatesum BEFORE INSERT ON invoicerow
+FOR EACH ROW BEGIN
+        DELETE FROM categorysum WHERE product=new.product;
+        INSERT INTO categorysum(product,productname,cost) SELECT invoicerow.product,productname,sum(cost) FROM INVOICEROW,PRODUCT where INVOICEROW.PRODUCT=New.PRODUCT AND PRODUCT.PRODUCTCODE=New.PRODUCT GROUP BY INVOICEROW.PRODUCT,PRODUCT.PRODUCTNAME;
+END;
+
+//
+
+DELIMITER ;
+ 

@@ -1,0 +1,14 @@
+-- Get average cost procedure
+
+DELIMITER //
+
+CREATE PROCEDURE GETAVGCOST()
+BEGIN
+    SELECT AVG(COST) FROM INVOICEROW;
+END;
+//
+
+DELIMITER ;
+
+-- Execute procedure
+CALL GETAVGCOST();
