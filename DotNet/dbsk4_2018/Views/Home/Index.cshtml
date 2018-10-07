@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>Students</h2>
+<table>
+    <tr>
+        @foreach (var dataColumn in ViewBag.AllStudentsTable.Columns)
+        {
+            <th>@dataColumn.ColumnName</th>
+        }
+    </tr>
+    @foreach (var studentRow in ViewBag.AllStudentsTable.Rows)
+    {
+        <tr>
+            @for (int i = 0; i < ViewBag.AllStudentsTable.Columns.Count; ++i)
+            {
+                <td>@studentRow[i]</td>
+            }
+        </tr>
+    }
+</table>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>Find student</h2>
+<form method="post" action="@Url.Action("SearchStudents", "Home")">
+    <label>
+        Name:
+        <input type="text" name="name" value="" placeholder="Student name" />
+    </label>
+    <label>
+        Study program:
+        <select name="studyProgram">
+            @foreach (var dr in ViewBag.AllStudyProgramsTable.Rows)
+            {
+                <option value="@dr["name"]">@dr["description"]</option>
+            }
+        </select>
+    </label>
+    <input type="submit" value="Search" />
+</form>

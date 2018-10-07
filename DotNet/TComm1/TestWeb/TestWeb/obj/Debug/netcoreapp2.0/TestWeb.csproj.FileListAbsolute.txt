@@ -1,0 +1,11 @@
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/bin/Debug/netcoreapp2.0/TestWeb.deps.json
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/bin/Debug/netcoreapp2.0/TestWeb.runtimeconfig.json
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/bin/Debug/netcoreapp2.0/TestWeb.runtimeconfig.dev.json
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/bin/Debug/netcoreapp2.0/TestWeb.dll
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/bin/Debug/netcoreapp2.0/TestWeb.pdb
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/obj/Debug/netcoreapp2.0/TestWeb.csprojAssemblyReference.cache
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/obj/Debug/netcoreapp2.0/TestWeb.csproj.CoreCompileInputs.cache
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/obj/Debug/netcoreapp2.0/TestWeb.AssemblyInfoInputs.cache
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/obj/Debug/netcoreapp2.0/TestWeb.AssemblyInfo.cs
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/obj/Debug/netcoreapp2.0/TestWeb.dll
+/Library/WebServer/Documents/KonstruktionExempel/DotNet/TComm1/TestWeb/TestWeb/obj/Debug/netcoreapp2.0/TestWeb.pdb
