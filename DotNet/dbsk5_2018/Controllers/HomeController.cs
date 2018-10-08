@@ -10,27 +10,19 @@ namespace dbsk5_2018.Controllers
 {
     public class HomeController : Controller
     {
-        private StudentsModel sm = new StudentsModel("wwwlab.iki.his.se-dbsk");
+        private CustomersModel sm = new CustomersModel();
 
         public IActionResult Index()
         {
-            ViewBag.AllStudentsTable = sm.GetAllStudents();
+            ViewBag.AllCustomersTable = sm.GetAllCustomers();
             return View();
         }
 
-        public IActionResult DeleteStudent(int id)
+        public IActionResult DeleteCustomer(string custno)
         {
-            sm.DeleteStudent(id);
+            sm.DeleteCustomer(custno);
             return RedirectToAction("Index");
         }
 
-        //
-        // GET: /Home/ResetDB/
-
-        public IActionResult ResetDB()
-        {
-            sm.ResetDB();
-            return RedirectToAction("Index");
-        }
     }
 }
