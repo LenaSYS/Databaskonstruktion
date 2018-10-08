@@ -6,24 +6,24 @@ namespace dbsk4_2018.Models
 {
     public class StudentsModel
     {
-        private string connectionString = "Server=localhost;Database=dbskdemo;User ID=ENTER_DB_USER;Password=ENTER_PASSWORD;Pooling=false;SslMode=none;";
+        private string connectionString = "Server=localhost;Database=a00leifo;User ID=myusername;Password=mypassword;Pooling=false;SslMode=none;";
 
         public StudentsModel(string connectionName)
         {
             //connectionString = System.Configuration.ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
         }
 
-        public DataTable GetAllStudents()
+        public DataTable GetAllCustomers()
         {
             MySqlConnection dbcon = new MySqlConnection(connectionString);
             dbcon.Open();
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM Student;", dbcon);
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM CUSTOMER;", dbcon);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "result");
-            DataTable studentsTable = ds.Tables["result"];
+            DataTable customerTable = ds.Tables["result"];
             dbcon.Close();
 
-            return studentsTable;
+            return customerTable;
         }
     }
 }

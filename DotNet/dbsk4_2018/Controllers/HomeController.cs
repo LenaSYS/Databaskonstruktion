@@ -13,7 +13,7 @@ namespace dbsk4_2018.Controllers
         public IActionResult Index()
         {
             StudentsModel sm = new StudentsModel("wwwlab.iki.his.se-dbsk");
-            ViewBag.AllStudentsTable = sm.GetAllStudents();
+            ViewBag.CustomerTable = sm.GetAllCustomers();
             return View();
         }
     }
