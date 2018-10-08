@@ -6,7 +6,7 @@ namespace dbsk4_2018.Models
 {
     public class StudentsModel
     {
-        private string connectionString = "Server=localhost;Database=dbskdemo;User ID=ENTER_DB_USER;Password=ENTER_PASSWORD;Pooling=false;";
+        private string connectionString = "Server=localhost;Database=dbskdemo;User ID=ENTER_DB_USER;Password=ENTER_PASSWORD;Pooling=false;SslMode=none;";
 
         public StudentsModel(string connectionName)
         {
