@@ -4,14 +4,9 @@ using MySql.Data.MySqlClient;
 
 namespace dbsk4_2018.Models
 {
-    public class StudentsModel
+    public class CustomersModel
     {
         private string connectionString = "Server=localhost;Database=a00leifo;User ID=myusername;Password=mypassword;Pooling=false;SslMode=none;";
-
-        public StudentsModel(string connectionName)
-        {
-            //connectionString = System.Configuration.ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
-        }
 
         public DataTable GetAllCustomers()
         {
