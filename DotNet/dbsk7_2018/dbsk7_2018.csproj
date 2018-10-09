@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Page2\" />
+    <Compile Remove="Controllers\Page2Controller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Page2\Index.cshtml" />
   </ItemGroup>
 </Project>
