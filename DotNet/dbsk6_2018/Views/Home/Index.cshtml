@@ -1,18 +1,14 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-<h2>Find student</h2>
-<form method="post" action="@Url.Action("SearchStudents", "Home")">
+<h2>Find Invoice Rows</h2>
+<form method="post" action="@Url.Action("SearchInvoiceRows", "Home")">
     <label>
-        Name:
-        <input type="text" name="name" value="" placeholder="Student name" />
-    </label>
-    <label>
-        Study program:
-        <select name="studyProgram">
-            @foreach (var dr in ViewBag.AllStudyProgramsTable.Rows)
+        Customer:
+        <select name="custno">
+            @foreach (var row in ViewBag.AllCustomersTable.Rows)
             {
-                <option value="@dr["name"]">@dr["description"]</option>
+                <option value="@row["CUSTNO"]">@row["NAME"]</option>
             }
         </select>
     </label>

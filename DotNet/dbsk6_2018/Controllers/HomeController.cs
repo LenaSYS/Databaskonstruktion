@@ -10,21 +10,18 @@ namespace dbsk6_2018.Controllers
 {
     public class HomeController : Controller
     {
-        private StudentsModel sm = new StudentsModel();
-        private StudyProgramModel sp = new StudyProgramModel();
+        private InvoiceRowsModel sm = new InvoiceRowsModel();
+        private CustomersModel sp = new CustomersModel();
 
         public IActionResult Index()
         {
-            ViewBag.AllStudyProgramsTable = sp.GetAllStudyPrograms();
+            ViewBag.AllCustomersTable = sp.GetAllCustomers();
             return View();
         }
 
-        //
-        // GET: /Home/SearchStudents/{name}?studyProgram={studyProgram}
-
-        public IActionResult SearchStudents(string name, string studyProgram)
+        public IActionResult SearchInvoiceRows(string custno)
         {
-            ViewBag.SearchResults = sm.SearchStudents(name, studyProgram);
+            ViewBag.SearchResults = sm.SearchInvoiceRows(custno);
             return View();
         }
     }
