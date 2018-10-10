@@ -2,15 +2,14 @@
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace dbsk6_2018.Models
+namespace dbsk7_2018.Models
 {
     public class CustomersModel
     {
-        private string connectionString = "Server=localhost;Database=a00leifo;User ID=myusername;Password=mypassword;Pooling=false;SslMode=none;";
+        private string connectionString = "Server=localhost;Database=a00leifo;User ID=myusername;Password=mypassword;Pooling=false;SslMode=none;convert zero datetime=True;";
 
         public CustomersModel()
         {
-
         }
 
         public DataTable SearchCustomers(string name)
@@ -27,26 +26,3 @@ namespace dbsk6_2018.Models
         }
     }
 }
-
-
-/*
- *
- *
-
-       public DataTable SearchStudents(string name, string studyProgram)
-        {
-            MySqlConnection dbcon = new MySqlConnection(connectionString);
-            dbcon.Open();
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM Student WHERE name LIKE @NAME AND studyProgram=@SPROGRAM;", dbcon);
-            adapter.SelectCommand.Parameters.AddWithValue("@NAME", "%" + name + "%");
-            adapter.SelectCommand.Parameters.AddWithValue("@SPROGRAM", studyProgram);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds, "result");
-            DataTable StudentsTable = ds.Tables["result"];
-            dbcon.Close();
-            return StudentsTable;
-        }
-    }
-
- * 
- */
