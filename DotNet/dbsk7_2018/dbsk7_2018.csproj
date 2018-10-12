@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <BaseDirectory>..\dbsk7b_2018</BaseDirectory>
   </PropertyGroup>
 
   <ItemGroup>
