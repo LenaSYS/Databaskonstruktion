@@ -25,13 +25,15 @@ namespace dbsk7_2018.Models
             return customersTable;
         }
 
-        public void DeleteCustomer(string custno)
+        public void InsertCustomer(string custno, string ssn, string name)
         {
             MySqlConnection dbcon = new MySqlConnection(connectionString);
             dbcon.Open();
-            string deleteString = "DELETE FROM CUSTOMER WHERE CUSTNO=@CUSTNO;";
+            string deleteString = "INSERT INTO CUSTOMER(CUSTNO,SSN,NAME) VALUES(@CUSTNO,@SSN,@NAME);";
             MySqlCommand sqlCmd = new MySqlCommand(deleteString, dbcon);
             sqlCmd.Parameters.AddWithValue("@CUSTNO", custno);
+            sqlCmd.Parameters.AddWithValue("@SSN", ssn);
+            sqlCmd.Parameters.AddWithValue("@NAME", name);
             int rows = sqlCmd.ExecuteNonQuery();
             dbcon.Close();
         }

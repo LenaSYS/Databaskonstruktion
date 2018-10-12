@@ -18,9 +18,9 @@ namespace dbsk7_2018.Controllers
             return View();
         }
 
-        public IActionResult InsertCustomer(string custno)
+        public IActionResult InsertCustomer(string custno, string ssn,string name)
         {
-            pm.InsertCustomer(custno);
+            sp.InsertCustomer(custno,ssn,name);
             return RedirectToAction("Index");
         }
 
