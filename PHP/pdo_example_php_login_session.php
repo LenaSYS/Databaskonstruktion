@@ -31,7 +31,7 @@ if((isset($_POST['login'])&&isset($_POST['password']))||(isset($_SESSION['login'
 				$stmt->execute();
 				
 				if($stmt->rowCount()>0){
-						echo "\n\nCustomer login successful";
+						echo "Customer login successful";
 
 						// If successful, save to session variable
 						$_SESSION['login']=$login;	
@@ -46,7 +46,7 @@ if((isset($_POST['login'])&&isset($_POST['password']))||(isset($_SESSION['login'
 				echo "<script>setTimeout(function(){ location.href='pdo_example_php_login_session_form.html' }, 2000);</script>";	
 		}
 }else{
-		echo "\n\nYou must provide login name and password";
+		echo "You must provide login name and password";
 		echo "<script>setTimeout(function(){ location.href='pdo_example_php_login_session_form.html' }, 2000);</script>";	
 }
 			

@@ -25,14 +25,14 @@ if((isset($_POST['login'])&&isset($_POST['password']))||(isset($_SESSION['login'
 				// set the PDO error mode to exception
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				
-				echo "\n\nConnected successfully";
+				echo "Connected successfully";
 
 				// If successful, save to session variable
 				$_SESSION['login']=$login;	
 				$_SESSION['password']=$password;
 
 		}catch(PDOException $e){
-				echo "\n\nConnection failed: " . $e->getMessage();
+				echo "Connection failed: " . $e->getMessage();
 				echo "<script>setTimeout(function(){ location.href='pdo_example_real_login_session_form.html' }, 2000);</script>";
 		}
 }else{
