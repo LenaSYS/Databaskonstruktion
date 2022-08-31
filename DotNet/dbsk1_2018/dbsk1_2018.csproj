@@ -1,12 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="NuGet.exe" Version="3.4.3" />
+    <PackageReference Include="MySql.Data" Version="8.0.30" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="6.0.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,5 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="MySql.Data" />
+    <None Remove="Microsoft.NETCore.Platforms" />
   </ItemGroup>
 </Project>
