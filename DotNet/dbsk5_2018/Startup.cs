@@ -28,6 +28,7 @@ namespace dbsk5_2018
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        [Obsolete]
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -37,7 +38,6 @@ namespace dbsk5_2018
 
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {

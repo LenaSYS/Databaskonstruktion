@@ -1,0 +1,24 @@
+﻿@using System.Data
+@model DataTable
+@{
+    ViewBag.Title = "Customer Area";
+}
+<h2>Customer Area - List of all customers</h2>
+<table>
+    <tr>
+        @foreach (DataColumn dataColumn in Model.Columns)
+        {
+            <th>@dataColumn.ColumnName</th>
+        }
+    </tr>
+    @foreach (DataRow customerRow in Model.Rows)
+    {
+        <tr>
+            @for (int i = 0; i < Model.Columns.Count; ++i)
+            {
+                <td>@customerRow[i]</td>
+            }
+        </tr>
+    }
+</table>
+@Html.ActionLink("Link back to home", "Index", "Home")

@@ -12,7 +12,7 @@ namespace dbsk9_2018.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.SomeText = "Some text passed from the controller using the ViewBag";
+            ViewBag.SomeText = "Some text passed from the controller using the ViewBag Object";
             return View();
         }
     }
