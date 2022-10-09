@@ -1,21 +1,24 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Microsoft.Extensions.Configuration;
 
 namespace dbsk6_2018.Models
 {
-    public class CustomersModel
+    public class CustomerModel
     {
-        private string connectionString = "Server=localhost;Port=3308;Database=a00leifo;User ID=sqllab;Password=Hare#2022;Pooling=false;SslMode=none;convert zero datetime=True;";
+        private readonly IConfiguration _configuration;
+        private string _connectionString;
 
-        public CustomersModel()
+        public CustomerModel(IConfiguration configuration)
         {
-
+            _configuration = configuration;
+            _connectionString = _configuration["ConnectionString"];
         }
 
         public DataTable GetAllCustomers()
         {
-            MySqlConnection dbcon = new MySqlConnection(connectionString);
+            MySqlConnection dbcon = new MySqlConnection(_connectionString);
             dbcon.Open();
             MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM CUSTOMER;", dbcon);
             DataSet ds = new DataSet();
