@@ -1,6 +1,4 @@
-using System;
-
-namespace dbsk6_2018.Models
+namespace mvc_code_generated_listbox.Models
 {
     public class ErrorViewModel
     {

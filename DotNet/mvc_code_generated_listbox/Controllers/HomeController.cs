@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using dbsk6_2018.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using mvc_code_generated_listbox.Models;
 
-namespace dbsk6_2018.Controllers
+namespace mvc_code_generated_listbox.Controllers
 {
     public class HomeController : Controller
     {

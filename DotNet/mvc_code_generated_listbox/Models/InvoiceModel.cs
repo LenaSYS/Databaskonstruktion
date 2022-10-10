@@ -1,31 +1,31 @@
-﻿using System;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Data;
 using Microsoft.Extensions.Configuration;
 
-namespace dbsk6_2018.Models
+namespace mvc_code_generated_listbox.Models
 {
-    public class CustomerModel
+    public class InvoiceModel
     {
         private readonly IConfiguration _configuration;
         private string _connectionString;
 
-        public CustomerModel(IConfiguration configuration)
+        public InvoiceModel(IConfiguration configuration)
         {
             _configuration = configuration;
             _connectionString = _configuration["ConnectionString"];
         }
 
-        public DataTable GetAllCustomers()
+        public DataTable SearchInvoiceRows(string custno)
         {
             MySqlConnection dbcon = new MySqlConnection(_connectionString);
             dbcon.Open();
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM CUSTOMER;", dbcon);
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM INVOICEROW WHERE CUSTNO=@CUSTNO;", dbcon);
+            adapter.SelectCommand.Parameters.AddWithValue("@CUSTNO", custno);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "result");
-            DataTable CustomersTable = ds.Tables["result"];
+            DataTable InvoiceRowsTable = ds.Tables["result"];
             dbcon.Close();
-            return CustomersTable;
+            return InvoiceRowsTable;
         }
     }
 }

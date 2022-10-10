@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbsk6_2018", "dbsk6_2018\dbsk6_2018.csproj", "{C4A2EAE8-7CBE-4007-9BC8-3F7F0A0B08ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_code_generated_listbox", "mvc_code_generated_listbox\mvc_code_generated_listbox.csproj", "{C4A2EAE8-7CBE-4007-9BC8-3F7F0A0B08ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
