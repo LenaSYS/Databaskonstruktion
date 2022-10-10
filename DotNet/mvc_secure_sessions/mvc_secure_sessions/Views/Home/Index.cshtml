@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1> Secure Sessions</h1>
+<p>This example demonstrates how to use secure sessions in .NET.</p>
+<form method="post" action="@Url.Action("Login", "Home")">
+    <input type="text" name="username" placeholder="Enter your name" />
+    <input type="submit" value="Login" />
+</form>
+<footer>
+    <div>SessionId:@ViewBag.SessionId</div>
+</footer>

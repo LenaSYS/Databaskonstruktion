@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "MyPage";
+}
+@if(ViewBag.SessionId==null){
+    <div>You are not logged in!</div>
+}else{
+    <h1>Welcome @ViewBag.username !</h1>
+    <p>Here we can show stuff that is only for @ViewBag.username .</p>
+    <div>
+        <div>Current Username: <span>@ViewBag.Username</span></div>
+        <div>Current Session Id: <span>@ViewBag.SessionId</span></div>
+    </div>
+    <form method="post" action="@Url.Action("Logout", "Home")">
+        <input type="submit" value="Logout" />
+    </form>
+}
+<hr />
+@Html.ActionLink("Return to landing page", "Index", "Home", null, new { title = "Return to landing page" })
+<footer>
+    <div>SessionId:@ViewBag.SessionId</div>
+</footer>

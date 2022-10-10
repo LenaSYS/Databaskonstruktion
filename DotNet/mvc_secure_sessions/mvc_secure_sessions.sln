@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_secure_sessions", "mvc_secure_sessions\mvc_secure_sessions.csproj", "{5D43E30B-8F32-48D5-8B64-1F9787B91AAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D43E30B-8F32-48D5-8B64-1F9787B91AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D43E30B-8F32-48D5-8B64-1F9787B91AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D43E30B-8F32-48D5-8B64-1F9787B91AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D43E30B-8F32-48D5-8B64-1F9787B91AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2E28BDB-8ACF-431A-BF7B-1F6E38004F72}
+	EndGlobalSection
+EndGlobal
