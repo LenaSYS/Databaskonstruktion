@@ -1,6 +1,6 @@
 using System;
 
-namespace dbsk7_2018.Models
+namespace mvc_insert_into_mysql_with_parameters.Models
 {
     public class ErrorViewModel
     {

@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using Microsoft.Extensions.Configuration;
 
-namespace dbsk7_2018.Models
+namespace mvc_insert_into_mysql_with_parameters.Models
 {
     public class CustomersModel
     {

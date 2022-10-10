@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using dbsk7_2018.Models;
+using mvc_insert_into_mysql_with_parameters.Models;
 using Microsoft.Extensions.Configuration;
 
-namespace dbsk7_2018.Controllers
+namespace mvc_insert_into_mysql_with_parameters.Controllers
 {
     public class HomeController : Controller
     {
