@@ -1,6 +1,6 @@
 using System;
 
-namespace dbsk9_2018.Models
+namespace mvc_use_logger_for_debug.Models
 {
     public class ErrorViewModel
     {

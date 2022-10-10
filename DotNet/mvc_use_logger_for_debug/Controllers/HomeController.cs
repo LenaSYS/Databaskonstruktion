@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using dbsk9_2018.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace dbsk9_2018.Controllers
+namespace mvc_use_logger_for_debug.Controllers
 {
     public class HomeController : Controller
     {

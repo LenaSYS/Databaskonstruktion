@@ -4,22 +4,22 @@ using System.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace dbsk9_2018.Models
+namespace mvc_use_logger_for_debug.Models
 {
     public class CustomerModel
     {
         private ILogger _logger;
         private IConfiguration _configuration;
-        private string connectionString; 
+        private string connectionString;
 
-        public CustomerModel(ILogger<CustomerModel> logger,IConfiguration configuration)
+        public CustomerModel(ILogger<CustomerModel> logger, IConfiguration configuration)
         {
             _configuration = configuration;
             _logger = logger;
-            _logger.LogInformation("====> CustomersModel {dateTime}", DateTime.UtcNow);
+            _logger.LogInformation("====> CustomersModel created {dateTime}", DateTime.UtcNow);
 
             connectionString = _configuration["ConnectionString"];
-            _logger.LogInformation("====> ConnectionString {ConnectionString}", connectionString);
+            _logger.LogInformation("====> CustomersModel:ConnectionString set to : {ConnectionString}", connectionString);
         }
 
         public DataTable GetAllCustomers()
