@@ -1,6 +1,4 @@
-using System;
-
-namespace dbsk7_2018.Models
+namespace mvc_search_in_database.Models
 {
     public class ErrorViewModel
     {

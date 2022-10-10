@@ -1,9 +1,8 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using dbsk7_2018.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using mvc_search_in_database.Models;
 
-namespace dbsk7_2018.Controllers
+namespace mvc_search_in_database.Controllers
 {
     public class HomeController : Controller
     {

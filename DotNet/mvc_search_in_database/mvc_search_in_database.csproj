@@ -6,14 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="MySql.Data" Version="8.0.30" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Controllers\Page2Controller.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="Views\Page2\Index.cshtml" />
-  </ItemGroup>
 </Project>

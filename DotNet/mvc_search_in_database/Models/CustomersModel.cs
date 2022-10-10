@@ -1,9 +1,8 @@
-﻿using System;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Data;
 using Microsoft.Extensions.Configuration;
 
-namespace dbsk7_2018.Models
+namespace mvc_search_in_database.Models
 {
     public class CustomersModel
     {
