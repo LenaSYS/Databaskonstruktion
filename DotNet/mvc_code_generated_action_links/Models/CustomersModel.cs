@@ -1,9 +1,8 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 
-namespace dbsk5_2018.Models
+namespace mvc_code_generated_action_links.Models
 {
     public class CustomersModel
     {

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using dbsk5_2018.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using mvc_code_generated_action_links.Models;
 
-namespace dbsk5_2018.Controllers
+namespace mvc_code_generated_action_links.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace dbsk5_2018.Models
+namespace mvc_code_generated_action_links.Models
 {
     public class ErrorViewModel
     {
