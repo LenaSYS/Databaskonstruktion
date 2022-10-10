@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbsk4_2018", "dbsk4_2018\dbsk4_2018.csproj", "{358B2C3A-6FDC-4CAE-84B6-3C83E6B36BBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_connect_model_to_mysql", "mvc_connect_model_to_mysql\mvc_connect_model_to_mysql.csproj", "{358B2C3A-6FDC-4CAE-84B6-3C83E6B36BBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

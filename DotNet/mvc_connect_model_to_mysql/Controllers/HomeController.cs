@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using dbsk4_2018.Models;
 using Microsoft.Extensions.Configuration;
+using mvc_connect_model_to_mysql.Models;
 
-namespace dbsk4_2018.Controllers
+namespace mvc_connect_model_to_mysql.Controllers
 {
     public class HomeController : Controller
     {

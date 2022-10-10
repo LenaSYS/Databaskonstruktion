@@ -1,9 +1,7 @@
 ﻿using System.Data;
-using Microsoft.Extensions.Configuration;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 
-namespace dbsk4_2018.Models
+namespace mvc_connect_model_to_mysql.Models
 {
     public class CustomersModel
     {
