@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using dbsk8_2018.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using mvc_multiple_controllers.Models;
 
-namespace dbsk8_2018.Controllers
+namespace mvc_multiple_controllers.Controllers
 {
     public class HomeController : Controller
     {

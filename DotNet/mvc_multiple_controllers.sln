@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbsk8_2018", "dbsk8_2018\dbsk8_2018.csproj", "{6227C7A2-DE20-441A-8BB6-BBC442F03F44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_multiple_controllers", "mvc_multiple_controllers\mvc_multiple_controllers.csproj", "{6227C7A2-DE20-441A-8BB6-BBC442F03F44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
