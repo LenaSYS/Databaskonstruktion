@@ -1,5 +1,9 @@
 ### Overview
-This example contains an example of the use of Datatypes in create table statements. It is important to think about the datatypes since the choice of datatypes affect the performance of the database and any other design decisions made down the line.
+This example contains an example of the use of markdown for documenting relational tables and documenting requirements. This serves as a living documentation document preserved in the github repository.
+
+*Bold*
+
+_Italic_
 
 <ins>Underlined,Underlined</ins>
 
