@@ -27,7 +27,7 @@ We use the following markdown code to represent a compound key of a relation tha
 A complete Example from the repository
 
 
-```**InvoiceRow**(<ins>RowNumber,~InvoiceNumber~</ins> , Cost, ProductName, Company)``
+```**InvoiceRow**(<ins>RowNumber,~InvoiceNumber~</ins> , Cost, ProductName, Company)```
 
 Which renders as
 
