@@ -13,7 +13,9 @@ Image of the chosen diagram in svg or png. When the model is constrained or we a
 # Relations
 
 **Customer**(<ins>Custno</ins>, SSN, Name, Regdate)
+
 **Invoice**(<ins>Number</ins> , Comment, Paid, ~CustomerCustno~)
+
 **InvoiceRow**(<ins>RowNumber,~InvoiceNumber~</ins> , Cost, ProductName, Company)
 
 # Requirements
