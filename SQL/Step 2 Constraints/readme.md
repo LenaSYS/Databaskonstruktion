@@ -33,26 +33,26 @@ Not null can also be used to guarantee that a relation is mandatory such as the 
 
 ```sql
 CREATE TABLE invoice(
-	invoiceno INTEGER NOT NULL,
-	custno CHAR(6) NOT NULL,
-	invcomment VARCHAR(1024),
-	datepaid DATETIME,
-	PRIMARY KEY (invoiceno),
-	FOREIGN KEY (custno) REFERENCES customer(custno)
-) ENGINE=INNODB;
+  invoiceno INTEGER NOT NULL,
+  custno CHAR(6) NOT NULL,
+  invcomment VARCHAR(1024),
+  datepaid DATETIME,
+  PRIMARY KEY (invoiceno),
+  FOREIGN KEY (custno) REFERENCES customer(custno)
+  ) ENGINE=INNODB;
 ```
 
 Not null can also be used to guarantee that a value is entered into other columns such as the cost for invoice rows. An invoice row does not make sense if it does not have a cost. 
 
 ```sql
 CREATE TABLE invoicerow(
-	invoiceno INTEGER NOT NULL,
-	rownumber INTEGER,
-	productname VARCHAR(30),
-	company VARCHAR(30),
-	cost REAL NOT NULL,
-	PRIMARY KEY (invoiceno,rownumber),
+  invoiceno INTEGER NOT NULL,
+  rownumber INTEGER,
+  productname VARCHAR(30),
+  company VARCHAR(30),
+  cost REAL NOT NULL,
+  PRIMARY KEY (invoiceno,rownumber),
   CHECK (cost>0),
-	FOREIGN KEY (invoiceno) REFERENCES invoice(invoiceno)
-) ENGINE=INNODB;
+  FOREIGN KEY (invoiceno) REFERENCES invoice(invoiceno)
+  ) ENGINE=INNODB;
 ```
