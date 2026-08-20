@@ -26,7 +26,6 @@ CREATE TABLE customer(
 	customername VARCHAR(10) NOT NULL,
 	regdate DATETIME,
 	PRIMARY KEY (custno),
-	CHECK ((regdate>”2009-01-01”)AND(regdate<”2010-01-01”)),
 	CHECK (ssn REGEXP '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),	
 ) ENGINE=INNODB;
 
@@ -44,7 +43,8 @@ CREATE TABLE invoicerow(
 	rownumber INTEGER,
 	productname VARCHAR(30),
 	company VARCHAR(30),
-	cost REAL,
+	cost REAL NOT NULL,
 	PRIMARY KEY (invoiceno,rownumber),
+  CHECK (cost>0),
 	FOREIGN KEY (invoiceno) REFERENCES invoice(invoiceno)
 ) ENGINE=INNODB;
