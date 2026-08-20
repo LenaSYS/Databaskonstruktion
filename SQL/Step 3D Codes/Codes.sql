@@ -22,7 +22,6 @@ CREATE TABLE customer(
 	customername VARCHAR(10) NOT NULL,
 	regdate DATETIME,
 	PRIMARY KEY (custno),
-	CHECK ((regdate>”2009-01-01”)AND(regdate<”2010-01-01”)),
 	CHECK (ssn REGEXP '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),	
 ) ENGINE=INNODB;
 
@@ -39,18 +38,19 @@ CREATE TABLE product(
 ) ENGINE=INNODB;
 
 CREATE TABLE invoicerow(
-	invoiceno INTEGER NOT NULL,
-	rownumber INTEGER,
-	custno CHAR(6) NOT NULL,
-	invcomment VARCHAR(1024),
-	datepaid DATETIME,
-	productname INTEGER,
-	company INTEGER,
-	cost REAL,
-	PRIMARY KEY (invoiceno,rownumber),
-	FOREIGN KEY (custno) REFERENCES customer(custno)
+  invoiceno INTEGER NOT NULL,
+  rownumber INTEGER,
+  custno CHAR(6) NOT NULL,
+  invcomment VARCHAR(1024),
+  datepaid DATETIME,
+  productname INTEGER,
+  company INTEGER,
+  cost REAL NOT NULL,
+  PRIMARY KEY (invoiceno,rownumber),
+  CHECK (cost>0),
+  FOREIGN KEY (custno) REFERENCES customer(custno)
   FOREIGN KEY (company) REFERENCES company(compnumber),
-	FOREIGN KEY (productname) REFERENCES product(prodnumber)
+  FOREIGN KEY (productname) REFERENCES product(prodnumber)
 ) ENGINE=INNODB;
 
 CREATE TABLE invoicerowinvcomment(
