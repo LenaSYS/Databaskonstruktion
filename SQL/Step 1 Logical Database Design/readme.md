@@ -1,7 +1,6 @@
 ### Overview
 This example contains an example of the use of Datatypes in create table statements. It is important to think about the datatypes since the choice of datatypes affect the performance of the database and any other design decisions made down the line.
 
-
 ### Initiation
 The first part of the code. Makes sure that we can just re-run the script to change the database. This way we do not need to drop the database explicity, every time that we run the script. The first time that the script is run, we need to remove the drop database statement either by -- commenting or by deleting the first row from the file.
 
@@ -10,7 +9,6 @@ DROP DATABASE a00leifo;
 CREATE DATABASE a00leifo;
 USE a00leifo;
 ```
-
 ### This database
 In this specific database, we make use of DATETIME for regdate and datepaid since both date and time is included. TIMESTAMP can also be used but has timezone conversion which may or may not be useful in each case. In the same manner, the use of INTEGER for customer number and invoice number may not be appropriate since smaller numbers may work equally well (2.000.000 rows in an invoice may be excessive). The use of real for representing money may not be the best choice when compared to the use of the decimal type.
 
@@ -24,8 +22,7 @@ CREATE TABLE invoice(
 	FOREIGN KEY (custno) REFERENCES customer(custno)
 ) ENGINE=INNODB;
 ```
-
-Suggestions for datatyping in MySQL are available below and on the MySQL homepage (!!!http://dev.mysql.com/doc/refman/5.7/en/data-types.html,MySQL 5.0 Datatypes!!!)
+Suggestions for datatyping in MySQL are available below and on the [MySQL homepage](http://dev.mysql.com/doc/refman/5.7/en/data-types.html)
 
 ### Datatypes in MySQL
 The simplest and most common datatype is CHAR or VARCHAR. If the size is very short (less than about 4 characters) or if the length is fixed, we use char. The difference is that char always stores the maximum number of characters (i.e. 10 characters if we use CHAR(10)). If we use varchar the length is a maximum value, but to know where the end of the string is, one or more bytes is added to mark the end of the string.
