@@ -34,6 +34,7 @@ CREATE TABLE PAIDinvoicerowinvcomment(
 	FOREIGN KEY (invoiceno,rownumber) REFERENCES PAIDinvoicerow(invoiceno,rownumber)
 ) ENGINE=INNODB;
 ```
+
 ### Keys
 
 It is important to note is that if we reuse the denormalized table we cannot use foreign keys, since it is impossible to make a foreign key that refers to two distinct tables. 
