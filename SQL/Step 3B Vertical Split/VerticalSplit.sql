@@ -53,8 +53,9 @@ CREATE TABLE invoicerow(
 	datepaid DATETIME,
 	productname INTEGER,
 	company INTEGER,
-	cost REAL,
-	PRIMARY KEY (invoiceno,rownumber),
+  cost REAL NOT NULL,
+  PRIMARY KEY (invoiceno,rownumber),
+  CHECK (cost>0),
 	FOREIGN KEY (company) REFERENCES company(compnumber),
 	FOREIGN KEY (productname) REFERENCES product(prodnumber)
 ) ENGINE=INNODB;
@@ -66,7 +67,9 @@ CREATE TABLE PAIDinvoicerow(
 	datepaid DATETIME,
 	productname INTEGER,
 	company INTEGER,
-	cost REAL,
+  cost REAL NOT NULL,
+  PRIMARY KEY (invoiceno,rownumber),
+  CHECK (cost>0),
 	PRIMARY KEY (invoiceno,rownumber),
 	FOREIGN KEY (company) REFERENCES company(compnumber),
 	FOREIGN KEY (productname) REFERENCES product(prodnumber)

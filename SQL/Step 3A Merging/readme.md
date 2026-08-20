@@ -13,17 +13,17 @@ Technilcally this is very simple as the only thing we need to do is to take the 
 
 ```sql
 CREATE TABLE invoicerow(
-	invoiceno INTEGER NOT NULL,
-	rownumber INTEGER,
-	custno CHAR(6) NOT NULL,
-	invcomment VARCHAR(1024),
-	datepaid DATETIME,
-	productname VARCHAR(30),
-	company VARCHAR(30),
+  invoiceno INTEGER NOT NULL,
+  rownumber INTEGER,
+  custno CHAR(6) NOT NULL,
+  invcomment VARCHAR(1024),
+  datepaid DATETIME,
+  productname VARCHAR(30),
+  company VARCHAR(30),
   cost REAL NOT NULL,
   PRIMARY KEY (invoiceno,rownumber),
   CHECK (cost>0),
-	FOREIGN KEY (custno) REFERENCES customer(custno)
+  FOREIGN KEY (custno) REFERENCES customer(custno)
 ) ENGINE=INNODB;
 ```
 The invoice number column from the invoice table needs to be removed as it otherwise would appear twice in the invoicerow table. 
