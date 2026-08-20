@@ -7,7 +7,7 @@ Constraints - restriktioner/begränsningar
 • Not Null - måste fyllas i
 • Check constraints
 
-Check constraints are however not possible in older MySQL (before 2019, MySQL 8.0.16) therefore a workaround may be needed
+Check constraints are not possible in older MySQL (before 2019, MySQL 8.0.16) therefore a workaround may be needed for very old systems
 	• Views Simple, but works only in some cases
 	• Triggers More difficult but works for any case
 	• Procedures Same as triggers but more restricted
