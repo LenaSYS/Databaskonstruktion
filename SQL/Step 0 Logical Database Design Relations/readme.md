@@ -1,5 +1,5 @@
 ### Overview
-This example contains an example of the use of markdown for documenting relational tables and documenting requirements. This serves as a living documentation document preserved in the github repository.
+This example contains an example of the use of the github [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) as a standard for documenting relational tables and documenting requirements. This serves as a living documentation document preserved in the github repository.
 
 We use the following markdown code to represent the name of the relation
 ```
