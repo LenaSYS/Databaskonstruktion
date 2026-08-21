@@ -1,3 +1,0 @@
-CREATE VIEW COMPANYCOMMENTS AS                                                                                                                        
-SELECT COMPANYNAME,COMMENT FROM COMPANY,INVOICEROW,INVOICEROWCOMMENT                                                                                  
-WHERE COMPANY.COMPANYCODE=INVOICEROW.COMPANY AND INVOICEROWCOMMENT.INVOICENO=INVOICEROW.INVOICENO AND INVOICEROWCOMMENT.NUMBER=INVOICEROW.NUMBER;     

@@ -1,5 +1,11 @@
+-- These two views specialize the data so that it is closer to the use case in the application.
+
 CREATE VIEW PRODUCTSTATISTICS AS
 SELECT PRODUCTNAME,AVG(COST) AS AVGCOST
 FROM INVOICEROW,PRODUCT
 WHERE INVOICEROW.PRODUCT=PRODUCT.PRODUCTCODE
 GROUP BY PRODUCT;
+
+CREATE VIEW COMPANYCOMMENTS AS                                                                                                                        
+SELECT COMPANYNAME,COMMENT FROM COMPANY,INVOICEROW,INVOICEROWCOMMENT                                                                                  
+WHERE COMPANY.COMPANYCODE=INVOICEROW.COMPANY AND INVOICEROWCOMMENT.INVOICENO=INVOICEROW.INVOICENO AND INVOICEROWCOMMENT.NUMBER=INVOICEROW.NUMBER;     
