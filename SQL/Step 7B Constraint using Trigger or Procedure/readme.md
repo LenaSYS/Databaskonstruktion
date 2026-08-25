@@ -1,5 +1,7 @@
 ### Overview
-This example contains an example of the use of stored procedures. A stored procedure is the same thing as a function or method in an ordinary programming language, but it is stored in the database itself. By using stored procedures we gain a slight bit of performance but also gain control over exactly which code that is run in the database. If we use stored procedures it is more difficult to compromise the security of the database.
+This example contains an example of the use of stored procedures and triggers for implementing constraints. 
+
+A stored procedure is the same thing as a function or method in an ordinary programming language, but it is stored in the database itself. By using stored procedures we gain a slight bit of performance but also gain control over exactly which code that is run in the database. If we use stored procedures it is more difficult to compromise the security of the database.
 
 This example also contains an example of the use of triggers. A trigger is a stored procedure that is fired automatically by some update
 of the database. Triggers perform actions in the database without the need for intervention by the user.
@@ -13,8 +15,7 @@ We can also check rules that are much more complex than the rules available usin
 
 ### This Example Database
 
-This example has an IF ELSE statement that has the same condition as the check constraint that we want to implement.
-
+This example is the same as the previous example that updates an invoice row but in addition to that code has an IF ELSE statement that has the same condition as the check constraint that we want to implement.
 
 ```sql
 CREATE PROCEDURE SETCOSTPRODRULE(InInvoice integer,InRowno integer, InCost real)
@@ -29,7 +30,6 @@ END;
 
 In a procedure we use signal statement that aborts execution and displays an error message. (on older versions of mysql the signal statement does not exist)
 In order to generate an error message in older versions of MySQL which do not support the signal statement which is intended for the purpose of generating error messages. If you are running MySQL 5.2 or later you can substitute that select statement for a SIGNAL statement [Mysql Documentation](https://dev.mysql.com/doc/refman/5.5/en/signal.html,see MySQL documentation).
-
 
 If the condition is false we update the data just like an ordinary procedure. The advantage of using the procedure is that we can guarantee that the code that is run is exactly the code in the procedure, which may be an advantage from a security standpoint, given that the user does not have access to the base table directly. The procedure also allows us to group a set of operations into the same procedure. 
 

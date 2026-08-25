@@ -8,19 +8,16 @@ CREATE TABLE INVOICEROWLOG(
     PRIMARY KEY(ID)
 );
 
--- Update cost for certain invoice and row number. Makes sure Cost is positive
+-- Update cost for certain invoice and row number. Logs data about the update
 
 DELIMITER //
-
 CREATE PROCEDURE GETCOSTPROD(prod VARCHAR(30))
 BEGIN
-
   INSERT INTO INVOICEROWLOG(OPERATION,USERNAME,PRODUCT,OPTIME) VALUES ("SEL",USER(),prod,NOW());
 
   SELECT SUM(COST)
   FROM INVOICEROW
   WHERE PRODUCT=prod;
-
 END;
 //
 
