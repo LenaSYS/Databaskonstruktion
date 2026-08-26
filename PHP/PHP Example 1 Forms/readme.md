@@ -7,7 +7,7 @@ We can either make self referencing applications that consist of one single php 
 
 In this case in the file PHPFormSelfreference.php we refer to that same file in the action part of the form and the code that shows the output of the form is in the same php file as the form.
 
-```php
+```html
 <form action="PHPFormSelfreference.php" method="POST">
   Field1: <input type="text" name="field1" /><br>
   Field2: <input type="text" name="field2" /><br>
@@ -19,7 +19,7 @@ In this case in the file PHPFormSelfreference.php we refer to that same file in 
 
 In this case in the file PHPFormForm.php we refer to another file PHPFormResponse.php in the action part of the form and the form debugging code is in the response page.
 
-```php
+```html
 <form action="PHPFormResponse.php" method="POST">
   Field1: <input type="text" name="field1" /><br>
   Field2: <input type="text" name="field2" /><br>
