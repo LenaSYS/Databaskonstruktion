@@ -4,11 +4,10 @@
 
 <table border='1'>
 
-<?php
-		
+<?php	
 		$pdo = new PDO('mysql:dbname=a00leifo;host=localhost', 'myusername', 'mypassword');
 
-		foreach($pdo->query("SELECT * FROM CUSTOMER") as $row){
+		foreach($pdo->query("SELECT * FROM CUSTOMER WHERE ") as $row){
 			echo "<tr>";
 			echo "<td>".$row['CUSTNO']."</td>";			
 			echo "<td>".$row['NAME']."</td>";			

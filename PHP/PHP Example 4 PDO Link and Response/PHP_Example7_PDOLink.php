@@ -8,7 +8,7 @@
 
 		foreach($pdo->query( 'SELECT * FROM CUSTOMER;' ) as $row){
 			echo "<tr><td>";
-			echo "<a href='PHP_Example8_PDOQueryLink.php?SSN=".urlencode($row['SSN'])."'>Customer: ".$row['SSN']."</a>";
+			echo "<a href='PHP_Example8_PDOSearch.php?SSN=".urlencode($row['SSN'])."'>Customer: ".$row['NAME']."</a>";
 			echo "</td></tr>";	
 		}
 ?>
