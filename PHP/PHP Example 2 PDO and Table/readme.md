@@ -38,6 +38,21 @@ foreach($pdo->query( 'CALL GETAVGCOST();' ) as $row){
 ```
 In essence, calling a procedure (a so call select procedure) that returns data as a table, is almost exactly the same as querying the database directly.
 
+### Generate table
+
+If we want to create an ordinary table we can generate the table tag using the foreach
+
+```php
+// Read all customers to a table
+foreach($pdo->query( 'SELECT * FROM CUSTOMER;' ) as $row){
+    echo "<tr>";
+    echo "<td>".$row['CUSTNO']."</td>";
+    echo "<td>".$row['SSN']."</td>";
+    echo "<td>".$row['NAME']."</td>";
+    echo "<td>".$row['REGDATE']."</td>";
+    echo "</tr>";	
+}
+```
 
 
 
