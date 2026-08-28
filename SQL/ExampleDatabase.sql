@@ -1,4 +1,4 @@
-DROP DATABASE a00leifo;
+-- DROP DATABASE a00leifo;
 CREATE DATABASE a00leifo;
 USE a00leifo;
 
