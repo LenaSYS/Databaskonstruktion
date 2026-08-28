@@ -10,8 +10,7 @@
 </form>
  
 <?php
-    
-    $pdo = new PDO('mysql:dbname=a00leifo;host=localhost', 'a00leifo', 'thisisthepassword');
+		$pdo = new PDO('mysql:dbname=a00leifo;host=127.0.0.1;port=3306', 'myusername', 'mypassword');
     $pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
  
     if(isset($_POST['companycode'])){
@@ -22,7 +21,7 @@
         $stmt->bindParam(':COMPANYCODE', $companycode);
         $stmt->bindParam(':COMPANYNAME', $companyname);
  
-         try{ 
+        try{ 
             $stmt->execute();                  
         }catch (PDOException $e){
             if($e->getCode()="23000"){
@@ -30,8 +29,7 @@
             }else{
                 echo $e->getMessage();
             }
-        }
-        
+        }   
     }
     
 ?>

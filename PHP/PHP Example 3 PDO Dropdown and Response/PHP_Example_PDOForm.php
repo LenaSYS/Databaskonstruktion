@@ -4,7 +4,7 @@
 <form action="PHP_Example_PDOSearch.php" method="post">
 	<select size='1' name='SSN'>
 <?php		
-		$pdo = new PDO('mysql:dbname=a00leifo;host=localhost', 'myusername', 'mypassword');
+		$pdo = new PDO('mysql:dbname=a00leifo;host=127.0.0.1;port=3306', 'myusername', 'mypassword');
 
     // We use order by in order to sort the dropdown. A non-sorted dropdown is a bad user interface.		
 		foreach($pdo->query( 'SELECT * FROM CUSTOMER ORDER BY NAME;' ) as $row){

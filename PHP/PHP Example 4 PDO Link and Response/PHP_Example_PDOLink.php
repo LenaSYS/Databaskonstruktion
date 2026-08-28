@@ -3,7 +3,7 @@
 <table>
 
 <?php	
-		$pdo = new PDO('mysql:dbname=a00leifo;host=localhost', 'myusername', 'mypassword');
+		$pdo = new PDO('mysql:dbname=a00leifo;host=127.0.0.1;port=3306', 'myusername', 'mypassword');
 		$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
 		foreach($pdo->query( 'SELECT * FROM CUSTOMER;' ) as $row){
