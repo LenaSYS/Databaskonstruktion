@@ -4,7 +4,7 @@
 <pre>
 <?php
 		// Connect to database and iterate over each row of the result of a procedure call
-		$pdo = new PDO('mysql:dbname=a00leifo;host=localhost', 'myusername', 'mypassword');
+		$pdo = new PDO('mysql:dbname=a00leifo;host=127.0.0.1;port=3306', 'myusername', 'mypassword');
 		$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
     foreach($pdo->query( 'CALL GETAVGCOST();' ) as $row){
