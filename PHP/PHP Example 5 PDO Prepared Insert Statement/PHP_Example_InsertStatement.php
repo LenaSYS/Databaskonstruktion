@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<form action="PHP_Example6_PDOPrepStatement.php" method="post">
+<form action="PHP_Example_InsertStatement.php" method="post">
 	Custno: <input type="text" name="Custno" /><br>
 	Name: <input type="text" name="Name" /><br>
 	SSN: <input type="text" name="SSN" /><br>
