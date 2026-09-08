@@ -1,0 +1,119 @@
+<h2>Databasimplementation</h2>
+<p>I den f&ouml;rsta delen av Databasimplementationen ska du l&auml;sa igenom uppgiftsbeskrivningen, och i en .md fil dokumentera den del av applikationen som du valt att ta med utifr&aring;n den del av diagrammet som du tilldelats.</p>
+<p>Finns det krav som &auml;r otydliga eller mots&auml;gelsefulla, s&aring; beh&ouml;ver varje person dokumentera antaganden de gjort i .md filen. Det finns ingen specificerad data att l&auml;gga in i uppgiften, ni ska sj&auml;lva l&auml;gga in data f&ouml;r att se att er kod fungerar.</p>
+<p>Ni ska &auml;ven med hj&auml;lp av constraints se till att bara vissa v&auml;rden kan lagras samt konstruera programkod i form av procedurer / triggers som anv&auml;nder databasen.</p>
+<p>F&ouml;r att f&aring; godk&auml;nt betyg s&aring; beh&ouml;ver man f&ouml;lja kravlistan nedanf&ouml;r.</p>
+<h3>Krav f&ouml;r G niv&aring;n&nbsp;</h3>
+<p><span><strong>NOTE: </strong></span><span><strong>You are not allowed to use Generative AI, for example ChatGPT, to produce substantial sections of code. To create code with the help of Generative AI to give the impression that you have created the code yourself can be seen as an attempt to mislead (cheat). Your obligations and the disciplinary process are explained in a <a href="https://student.his.se/studentliv/rattigheter-och-skyldigheter/fusk-och-disciplinara-atgarder/">document on Studentportalen</a></strong></span><span><strong>.&nbsp;</strong></span></p>
+<p><span><strong>NOTE: G&ouml;r <em>endast</em> de kommentarer som efterfr&aring;gas. De enda kommentarer som &auml;r till&aring;tna &auml;r kommentarer som &auml;r en rad l&aring;nga och som antingen b&ouml;rjar p&aring; samma rad som tillh&ouml;rande kod eller raden f&ouml;re / efter.</strong></span></p>
+<p><span><strong>&nbsp; &nbsp; &nbsp;&nbsp;--- VECKA 1 ---</strong></span></p>
+<ol start="1">
+    <li>B&ouml;rja med att g&ouml;ra en fork p&aring;&nbsp; <a class="inline_disabled" title="Link" href="https://git.webug.se/hGustavs/Databaskonstruktion-Assignment-1-Startup" target="_blank" rel="noopener">Database Assignment Startup</a> on git.webug.se. Modifiera filen "readme.md" genom att skriva lite text och &auml;ndra i en rubrik. G&ouml;r en commit till git.webug.se och bekr&auml;fta att uppdateringarna &auml;r synliga p&aring; git.webug.se</li>
+    <li>Du skall b&ouml;rja med att g&ouml;ra delar av stegen i <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%200%20Logical%20Database%20Design%20Relations" target="_blank" rel="noopener">Konceptuell Databasdesign</a>. Modifiera diagrammet fr&aring;n uppgiftstexten f&ouml;r att visa den del av diagrammet som du tilldelats samt de delar du planerar att implementera i din applikation. Modifiera i likhet med <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/blob/master/SQL/Step%200%20Logical%20Database%20Design%20Relations/documentation.md" target="_blank" rel="noopener">kodexemplet</a> den f&ouml;rsta rubriken (Overview / ) med ett par rader&nbsp; Du kan utg&aring; fr&aring;n .png eller .svg versionerna av diagrammet. Spara det uppdaterade diagrammet som ER_diagram.svg eller ER_diagram.png i samma mapp som readme.md och efter det, enligt <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/blob/master/SQL/Step%200%20Logical%20Database%20Design%20Relations/documentation.md" target="_blank" rel="noopener">kodexemplet</a> l&auml;gg in en l&auml;nk till diagrammet. G&ouml;r en commit till git.webug.se med ett relevant meddelande (ordet diagram b&ouml;r vara med) och bekr&auml;fta att uppdateringarna &auml;r synliga p&aring; git.webug.se. Det &auml;r till&aring;tet att g&ouml;ra flera commits med uppdateringar av diagrammet n&auml;r det f&ouml;r&auml;ndras under arbetets g&aring;ng. Du skall v&auml;lja ut de entiteter som &auml;r viktigast f&ouml;r din tilldelade agent-typ <span style="text-decoration: underline;"><span style="color: #c71f23; text-decoration: underline;"><strong>totalt mellan ca 20-25 procent av hela diagrammet</strong></span></span>. F&ouml;r respektive grupp (du har tilldelats en grupp A-E i canvas) g&auml;ller f&ouml;ljande agenter.&nbsp;
+        <ul style="list-style-type: circle;">
+            <li>A: Databasadministrat&ouml;r</li>
+            <li>B: Desinformat&ouml;r</li>
+            <li>C: F&auml;ltagent</li>
+            <li>D: Gruppledare</li>
+            <li>E: Handl&auml;ggare</li>
+        </ul>
+    </li>
+    <li>L&auml;s igenom kraven i uppgiftsspecifikationen och uppdatera readme.md med de krav som &auml;r relevanta f&ouml;r respektive utvald entitet (varje entitet har en rubrik). Utg&aring; fr&aring;n kodexemplet som beskriver markdown f&ouml;r <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%200%20Logical%20Database%20Design%20Relations" target="_blank" rel="noopener">logisk databasdesign</a>. I detta steget skall du endast samla kraven som &auml;r relevanta f&ouml;r den utvalda upps&auml;ttningen entiteter. Om du senare v&auml;ljer att modifiera listan eller att stryka krav s&aring; kan man g&ouml;ra detta genom strikethrough i markdown (man anv&auml;nder ~ f&ouml;r att stryka stycken). G&ouml;r en eller flera commits till git.webug.se med ett relevanta meddelanden (ordet krav eller requirements b&ouml;r vara med) och bekr&auml;fta att uppdateringarna &auml;r synliga p&aring; git.webug.se. Det &auml;r till&aring;tet att g&ouml;ra flera commits med uppdateringar av kraven n&auml;r de f&ouml;r&auml;ndras under arbetets g&aring;ng.&nbsp;</li>
+    <li>Genomf&ouml;r f&ouml;rsta f&ouml;rebyggande steget i en logisk databasdesign (skapa relationer) f&ouml;r de utvalda entiteterna.&nbsp;&nbsp;
+        <ul style="list-style-type: circle;">
+            <li>Utg&aring; fr&aring;n kodexemplet som beskriver markdown f&ouml;r <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%200%20Logical%20Database%20Design%20Relations" target="_blank" rel="noopener">logisk databasdesign</a>. Blir det f&ouml;r m&aring;nga relationer eller f&ouml;r f&aring; relationer s&aring; kan man &aring;terg&aring; till steg 2 eller steg 3 och uppdatera diagram och krav genom att l&auml;gga till eller ta bort delar av diagram eller krav.</li>
+            <li>G&ouml;r en eller flera commits till git.webug.se med relevanta meddelanden (ordet relationer b&ouml;r vara med) och bekr&auml;fta att uppdateringarna &auml;r synliga p&aring; git.webug.se.</li>
+            <li>Det &auml;r till&aring;tet att g&ouml;ra flera commits med uppdateringar av kraven n&auml;r de f&ouml;r&auml;ndras under arbetets g&aring;ng.&nbsp;</li>
+        </ul>
+    </li>
+    <li>Genomf&ouml;r det f&ouml;rsta steget i en logisk databasdesign (best&auml;m datatyper) f&ouml;r de relationer som skapats i f&ouml;reg&aring;ende steg.
+        <ul style="list-style-type: circle;">
+            <li>Utg&aring; fr&aring;n kodexemplet som beskriver hur man best&auml;mmer <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%200%20Logical%20Database%20Design%20Relations" target="_blank" rel="noopener">datatyper i Logisk databasdesign</a>.</li>
+            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att din kod fungerar korrekt, g&ouml;r en eller flera commits till git.webug.se med ett relevanta meddelanden (ordet datatyper b&ouml;r vara med).</li>
+            <li>Minst<em><strong> tre </strong></em>olika datatyper skall anv&auml;ndas.&nbsp;</li>
+        </ul>
+    </li>
+    <li>L&auml;gg in relevant data (inserts).
+        <ul style="list-style-type: circle;">
+            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att din kod fungerar korrekt, g&ouml;r en eller flera commits till git.webug.se med relevanta meddelanden (orden Insert och Datatyper b&ouml;r vara med) och bekr&auml;fta att uppdateringarna &auml;r synliga p&aring; git.webug.se.</li>
+            <li>Varje tabell skall ha n&aring;gra rader data med olika information.</li>
+            <li>Fr&auml;mmande nycklar skall anv&auml;ndas men om det &auml;r till&aring;tet s&aring; skall &auml;ven n&aring;gra rader inte vara kopplade. Exempelvis om vi har tv&aring; tabeller med en fr&auml;mmande nyckel&nbsp; utan not null mellan dem exempelvis personer som &auml;ger bankkonton, s&aring; skall man l&auml;gga in n&aring;gra personer, och n&aring;gra bankkonton, n&aring;gon person saknar bankkonto och n&aring;got bankkonto skall inte vara kopplad till en person.<br /><strong>--- VECKA 2 ---</strong></li>
+        </ul>
+    </li>
+    <li>G&ouml;r det andra steget i en logisk databasdesign (best&auml;m constraints) f&ouml;r de tabeller som skapats i f&ouml;reg&aring;ende steg.
+        <ul style="list-style-type: circle;">
+            <li>Utg&aring; fr&aring;n kodexemplet som beskriver hur man best&auml;mmer <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%202%20Constraints" target="_blank" rel="noopener">constraints i Logisk databasdesign</a>.</li>
+            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att din kod fungerar korrekt, g&ouml;r en eller flera commits till git.webug.se med relevanta meddelanden (ordet constraints b&ouml;r vara med).</li>
+            <li>Totalt skall du g&ouml;ra minst <em><strong>tv&aring; check constraints</strong></em>, minst <em><strong>en unique</strong></em> och minst <em><strong>tre st&auml;llen som anv&auml;nder NOT NULL</strong></em> ut&ouml;ver nycklar. Om du inte hittar relevanta constraints i dina utvalda krav, l&auml;gg till relevanta krav genom att l&auml;gga till kraven i readme.md och g&ouml;ra en commit f&ouml;r detta. Samtliga constraints skall implementera n&aring;gon form av krav.</li>
+            <li>G&ouml;r en kommentar som &auml;r en rad l&aring;ng f&ouml;r respektive check constraint.</li>
+        </ul>
+    </li>
+    <li>L&auml;gg in relevant data (inserts).
+        <ul>
+            <li style="list-style-type: none;">
+                <ul>
+                    <li style="list-style-type: none;">
+                        <ul style="list-style-type: circle;">
+                            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att programkoden fungerar, g&ouml;r en eller flera commits till git.webug.se med relevanta meddelanden (orden Insert och Constraint b&ouml;r vara med).</li>
+                            <li>Varje constraint skall testas att den fungerar. Exempelvis s&aring; kan en constraint s&auml;ga att kostnad skall vara &ouml;ver 0. D&aring; kan man pr&ouml;va att g&ouml;ra en insert med en positiv kostnad och en insert med en negativ kostnad f&ouml;r att se att detta constraint fungerar.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>G&ouml;r det f&ouml;rsta steget i fysisk databasdesign (denormalisering).
+        <ul style="list-style-type: circle;">
+            <li>Utg&aring; fr&aring;n tabellerna fr&aring;n tidigare steg samt kodexemplen som beskriver de olika typerna av denormalisering, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%203A%20Merging" target="_blank" rel="noopener">merge</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%203C%20Horizontal%20Split" target="_blank" rel="noopener">horisontell</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%203B%20Vertical%20Split" target="_blank" rel="noopener">vertikal</a> och <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%203D%20Codes" target="_blank" rel="noopener">kodifiering</a>.</li>
+            <li>Spara din kod i database.sql. G&ouml;r flera olika commits till git.webug.se f&ouml;r respektive denormaliseringsteknik med relevanta meddelanden (ordet denormalisering b&ouml;r vara med i respektive meddelande exempelvis "Denormalisering Kodning 1").</li>
+            <li>Merge och kodifiering anv&auml;ndas <strong>minst en g&aring;ng per styck men sammantaget tre g&aring;nger totalt</strong>, exv en merge och tv&aring; koder.&nbsp;</li>
+            <li>Horisontell och vertikal denoromalisering skall anv&auml;ndas <strong>minst tv&aring; g&aring;nger totalt</strong>, exempelvis tv&aring; horisontella, eller en horisontell och en vertikal.</li>
+        </ul>
+    </li>
+    <li>L&auml;gg in relevant data (inserts).
+        <ul style="list-style-type: circle;">
+            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att programkoden fungerar, g&ouml;r en eller flera commits till git.webug.se med ett relevanta meddelanden (orden Insert och Denormalisering b&ouml;r vara med).</li>
+            <li>Varje denormalisering skall testas att den fungerar. Exempelvis s&aring; kan vi ha en kodifiering som implementerar bostadskommun f&ouml;r en person med ett nummer. Vi beh&ouml;ver d&auml;rf&ouml;r modifiera v&aring;ra inserts s&aring; att personen i st&auml;llet f&ouml;r exempelvis "Grums" nu har numret "1" och vi m&aring;ste &auml;ven l&auml;gga in kommunen "Grums" i kodtabellen.<br /><br /><br /><br /></li>
+        </ul>
+    </li>
+    <li>G&ouml;r det andra steget i fysisk databasdesign (indexering)
+        <ul style="list-style-type: circle;">
+            <li>Utg&aring; fr&aring;n tabellerna fr&aring;n tidigare steg samt kodexemplet som beskriver de olika typerna av <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%204%20Indexing" target="_blank" rel="noopener">indexering</a>.</li>
+            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att programkoden fungerar, g&ouml;r flera olika commits till git.webug.se f&ouml;r respektive index med relevanta meddelanden (ordet indexering b&ouml;r vara med i respektive meddelande)</li>
+            <li>G&ouml;r minst <strong>tv&aring; </strong>olika index. Det &auml;r till&aring;tet att ha b&aring;da index p&aring; samma tabell.</li>
+            <li>G&ouml;r en kommentar som &auml;r en rad l&aring;ng f&ouml;r respektive index enligt kodexemplet.</li>
+        </ul>
+    </li>
+    <li>G&ouml;r det tredje steget i fysisk databasdesign (r&auml;ttigheter)
+        <ul style="list-style-type: circle;">
+            <li>Utg&aring; fr&aring;n tabellerna fr&aring;n tidigare steg samt kodexemplet som beskriver de olika typerna av <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%205%20Rights" target="_blank" rel="noopener">r&auml;ttigheter</a>.</li>
+            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att programkoden fungerar, g&ouml;r en eller flera olika commits till git.webug.se med relevanta meddelanden (ordet r&auml;ttigheter b&ouml;r vara med i respektive meddelande)</li>
+            <li>G&ouml;r <strong>minst tre </strong>olika grant / revoke kommandon.</li>
+            <li>G&ouml;r en kommentar som &auml;r en rad l&aring;ng f&ouml;r respektive kommando enligt kodexemplet.<br /><br />&nbsp;<strong>--- Steget under b&ouml;r p&aring;b&ouml;rjas under VECKA 2 och vara klart under VECKA 3&nbsp; ---</strong><br /><br /></li>
+        </ul>
+    </li>
+    <li>G&ouml;r det femte steget i fysisk databasdesign (procedures / triggers, det fj&auml;rde steget, vyer &auml;r endast om man vill f&aring; VG)<br />
+        <ul style="list-style-type: circle;">
+            <li>Utg&aring; fr&aring;n tabellerna fr&aring;n tidigare steg samt kodexemplen som beskriver de olika typerna av procedurer / triggers, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%203A%20Merging" target="_blank" rel="noopener"></a><a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207A%20Procedure%20Functions" target="_blank" rel="noopener">funktioner</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207B%20Constraint%20using%20Trigger%20or%20Procedure" target="_blank" rel="noopener">constraints</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207C%20Logging%20using%20Trigger%20or%20Procedure" target="_blank" rel="noopener">loggning</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207D%20Materialize%20or%20Move" target="_blank" rel="noopener">materialisering / flytt</a>.</li>
+            <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att programkoden fungerar, g&ouml;r en eller flera olika commits till git.webug.se med relevanta meddelanden (ordet procedur eller trigger b&ouml;r vara med i respektive meddelande)</li>
+            <li>Implementera <strong>minst fyra </strong>olika procedurer / triggers men minst en trigger och en procedur. Det &auml;r exempelvis allts&aring; inte till&aring;tet att g&ouml;ra fyra triggers, men en trigger och tre procedurer &auml;r till&aring;tet.</li>
+            <li><strong>Minst tv&aring;</strong> av de olika typerna ovan&nbsp; skall implementeras i de fyra olika triggers / procedurer man implementerat. Det &auml;r till&aring;tet att bygga en procedur / trigger som implementerar mer &auml;n en funktion exv en trigger som b&aring;de loggar och utv&auml;rderar en constraint.</li>
+            <li>G&ouml;r exakt en f&ouml;rklarande kommentar som &auml;r en rad l&aring;ng f&ouml;r respektive procedur / trigger enligt kodexemplet.</li>
+        </ul>
+    </li>
+</ol>
+<h3>Underlag till muntlig redovisning</h3>
+<p>Om din readme.md inte har kapitel f&ouml;r nedanst&aring;ende g&ouml;r ett kapitel f&ouml;r respektive.</p>
+<ol start="1">
+    <li>Beskriv vilken del av uppgiften du tilldelats med en mening eller tv&aring; (A, B, C, D or E)</li>
+    <li>Det skall finnas kapitel som ut&ouml;ver inneh&aring;llet ovan p&aring; n&aring;gra rader beskriver de beslut som underligger f&ouml;ljande delar
+        <ul style="list-style-type: circle;">
+            <li>Konceptuell Databasdesign</li>
+            <li>Logisk Databasdesign</li>
+            <li>Fysisk Databasdesign</li>
+        </ul>
+    </li>
+    <li>I ett kapitel skall respektive procedur / trigger skall ha ett par rader som beskriver respektive procedur / trigger. Beskrivningen skall utg&aring; fr&aring;n kraven och skall inte vara identisk med kommentaren f&ouml;r respektive procedur / trigger som beskriver programkoden.</li>
+</ol>
+<p class="c12">&nbsp;</p>
+<p>&nbsp;</p>
