@@ -4,7 +4,7 @@
 	
 <?php
 
-		$pdo = new PDO('mysql:dbname=a00leifo;host=localhost', 'myusername', 'mypassword');
+		$pdo = new PDO('mysql:dbname=a00leifo;host=127.0.0.1;port=3306', 'myusername', 'mypassword');
 	
 		if(isset($_POST['ModCustno'])){
 				$querystring='UPDATE CUSTOMER SET CUSTNO=:CUSTNO, SSN=:SSN, NAME=:NAME, REGDATE=:REGDATE WHERE CUSTNO=:MODCUSTNO;';
@@ -17,7 +17,7 @@
 				$stmt->execute();				
 		}else if(isset($_POST['EdCustno'])){
 				echo "<div style='border:1px solid outset #888;border-radius:4px;background-color:#eee;'>";
-				echo "<form action='PHP_Example12_HiddenForm.php' method='post' >";
+				echo "<form action='PHP_Example_DetailForm.php' method='post' >";
 						echo "<input type='hidden' name='ModCustno' value='".$_POST['EdCustno']."'>";
 						echo "Custno:<input type='text' name='CUSTNO' value='".$_POST['EdCustno']."'><br>";
 						echo "SSN:<input type='text' name='SSN' value='".$_POST['SSN']."'><br>";
@@ -28,6 +28,11 @@
 				echo "</div>";
 		}
 	
+    // Forms are not allowed inside TBODY / TABLE / TR but are allowed inside TD or TH so we generate forms first and connect using form attribute
+		foreach($pdo->query("SELECT * FROM CUSTOMER") as $row){
+			echo "<form action='PHP_Example_DetailForm.php' method='post' id='form".$row['CUSTNO']."'></form>";
+		}
+    
 		echo "<table style='border-collapse:collapse;'>";
 		foreach($pdo->query("SELECT * FROM CUSTOMER") as $row){
 			echo "<tr>";
@@ -35,15 +40,16 @@
 			echo "<td>".$row['SSN']."</td>";
 			echo "<td>".$row['NAME']."</td>";			
 			echo "<td>".$row['REGDATE']."</td>";
+
+      // Connect input to correct form through ID
 			echo "<td>";
-				echo "<form action='PHP_Example12_HiddenForm.php' method='post' >";
-					echo "<input type='hidden' name='EdCustno' value='".$row['CUSTNO']."'>";
-					echo "<input type='hidden' name='SSN' value='".$row['SSN']."'>";			
-					echo "<input type='hidden' name='NAME' value='".$row['NAME']."'>";			
-					echo "<input type='hidden' name='REGDATE' value='".$row['REGDATE']."'>";			
-					echo "<input type='submit' value='Edit' >";			
-				echo "</form>";
-			echo "</td>";
+      echo "<input type='hidden'   form='form".$row['CUSTNO']."' name='NAME' value='".$row['NAME']."'>";
+			echo "<input type='hidden' form='form".$row['CUSTNO']."' name='EdCustno' value='".$row['CUSTNO']."'>";
+			echo "<input type='hidden' form='form".$row['CUSTNO']."' name='REGDATE' value='".$row['REGDATE']."'>";
+			echo "<input type='hidden' form='form".$row['CUSTNO']."' name='SSN' value='".$row['SSN']."'>";
+			echo "<input type='submit' form='form".$row['CUSTNO']."' value='Edit'>";
+      echo "</td>";
+
 			echo "</tr>";
 		}
 		echo "</table>";
