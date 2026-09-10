@@ -24,6 +24,7 @@
             <li>Utg&aring; fr&aring;n kodexemplet som beskriver markdown f&ouml;r <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%200%20Logical%20Database%20Design%20Relations" target="_blank" rel="noopener">logisk databasdesign</a>. Blir det f&ouml;r m&aring;nga relationer eller f&ouml;r f&aring; relationer s&aring; kan man &aring;terg&aring; till steg 2 eller steg 3 och uppdatera diagram och krav genom att l&auml;gga till eller ta bort delar av diagram eller krav.</li>
             <li>G&ouml;r en eller flera commits till git.webug.se med relevanta meddelanden (ordet relationer b&ouml;r vara med) och bekr&auml;fta att uppdateringarna &auml;r synliga p&aring; git.webug.se.</li>
             <li>Det &auml;r till&aring;tet att g&ouml;ra flera commits med uppdateringar av kraven n&auml;r de f&ouml;r&auml;ndras under arbetets g&aring;ng.&nbsp;</li>
+            <li><strong>Notera: </strong><span style="color: #c71f23;">Man b&ouml;r inte uppdatera relationerna s&aring; de motsvarar den fysiska datamodellen</span> n&auml;r man uppdaterar tabellernas utformning i senare steg. Relationerna &auml;r en dokumentation av hur man valt &ouml;verf&ouml;ring fr&aring;n ER till relationer och b&ouml;r inte vara en dokumentation av den fysiska datamodellen. Den fysiska datamodellen dokumenteras av SQL koden i repot.</li>
         </ul>
     </li>
     <li>Genomf&ouml;r det f&ouml;rsta steget i en logisk databasdesign (best&auml;m datatyper) f&ouml;r de relationer som skapats i f&ouml;reg&aring;ende steg.
@@ -68,12 +69,13 @@
             <li>Spara din kod i database.sql. G&ouml;r flera olika commits till git.webug.se f&ouml;r respektive denormaliseringsteknik med relevanta meddelanden (ordet denormalisering b&ouml;r vara med i respektive meddelande exempelvis "Denormalisering Kodning 1").</li>
             <li>Merge och kodifiering anv&auml;ndas <strong>minst en g&aring;ng per styck men sammantaget tre g&aring;nger totalt</strong>, exv en merge och tv&aring; koder.&nbsp;</li>
             <li>Horisontell och vertikal denoromalisering skall anv&auml;ndas <strong>minst tv&aring; g&aring;nger totalt</strong>, exempelvis tv&aring; horisontella, eller en horisontell och en vertikal.</li>
+            <li><strong>Notera:</strong> <span style="color: #c71f23;">Man kan inte g&ouml;ra merge &ouml;ver arvsrelationen</span> utan endast &ouml;ver 1:1, 1:N eller i n&ouml;dfall N:N. Att g&ouml;ra merge &ouml;ver arvsrelationen &auml;r samma sak som att g&ouml;ra ett annat val (i databassystem kallades de A-D) f&ouml;r &ouml;verf&ouml;ringen relationernai steg 4 ovan. Man kan d&auml;rf&ouml;r inte g&ouml;ra val A f&ouml;r att sedan g&ouml;ra en merge s&aring; man f&aring;r samma tabeller som variant C. P&aring; samma s&auml;tt kan man inte g&ouml;ra en vertikal eller horizontell denormalisering som &aring;terskapar avdelade relationer (variant A) fr&aring;n de sammanslagna (Variant C).</li>
         </ul>
     </li>
     <li>L&auml;gg in relevant data (inserts).
         <ul style="list-style-type: circle;">
             <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att programkoden fungerar, g&ouml;r en eller flera commits till git.webug.se med ett relevanta meddelanden (orden Insert och Denormalisering b&ouml;r vara med).</li>
-            <li>Varje denormalisering skall testas att den fungerar. Exempelvis s&aring; kan vi ha en kodifiering som implementerar bostadskommun f&ouml;r en person med ett nummer. Vi beh&ouml;ver d&auml;rf&ouml;r modifiera v&aring;ra inserts s&aring; att personen i st&auml;llet f&ouml;r exempelvis "Grums" nu har numret "1" och vi m&aring;ste &auml;ven l&auml;gga in kommunen "Grums" i kodtabellen.</li>
+            <li>Varje denormalisering skall testas att den fungerar. Exempelvis s&aring; kan vi ha en kodifiering som implementerar bostadskommun f&ouml;r en person med ett nummer. Vi beh&ouml;ver d&auml;rf&ouml;r modifiera v&aring;ra inserts s&aring; att personen i st&auml;llet f&ouml;r exempelvis "Grums" nu har numret "1" och vi m&aring;ste &auml;ven l&auml;gga in kommunen "Grums" i kodtabellen.<br /><br /><br /><br /></li>
         </ul>
     </li>
     <li>G&ouml;r det andra steget i fysisk databasdesign (indexering)
@@ -92,12 +94,12 @@
             <li>G&ouml;r en kommentar som &auml;r en rad l&aring;ng f&ouml;r respektive kommando enligt kodexemplet.<br /><br />&nbsp;<strong>--- Steget under b&ouml;r p&aring;b&ouml;rjas under VECKA 2 och vara klart under VECKA 3&nbsp; ---</strong><br /><br /></li>
         </ul>
     </li>
-    <li>G&ouml;r det femte steget i fysisk databasdesign (procedures / triggers, det fj&auml;rde steget, vyer &auml;r endast om man vill f&aring; VG)<br />
+    <li>G&ouml;r det femte steget i fysisk databasdesign (procedures / triggers)<br />
         <ul style="list-style-type: circle;">
             <li>Utg&aring; fr&aring;n tabellerna fr&aring;n tidigare steg samt kodexemplen som beskriver de olika typerna av procedurer / triggers, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%203A%20Merging" target="_blank" rel="noopener"></a><a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207A%20Procedure%20Functions" target="_blank" rel="noopener">funktioner</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207B%20Constraint%20using%20Trigger%20or%20Procedure" target="_blank" rel="noopener">constraints</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207C%20Logging%20using%20Trigger%20or%20Procedure" target="_blank" rel="noopener">loggning</a>, <a class="inline_disabled" href="https://github.com/LenaSYS/Databaskonstruktion/tree/master/SQL/Step%207D%20Materialize%20or%20Move" target="_blank" rel="noopener">materialisering / flytt</a>.</li>
             <li>Spara din kod i database.sql. N&auml;r du bekr&auml;ftat att programkoden fungerar, g&ouml;r en eller flera olika commits till git.webug.se med relevanta meddelanden (ordet procedur eller trigger b&ouml;r vara med i respektive meddelande)</li>
             <li>Implementera <strong>minst fyra </strong>olika procedurer / triggers men minst en trigger och en procedur. Det &auml;r exempelvis allts&aring; inte till&aring;tet att g&ouml;ra fyra triggers, men en trigger och tre procedurer &auml;r till&aring;tet.</li>
-            <li><strong>Minst tv&aring;</strong> av de olika typerna ovan&nbsp; skall implementeras i de fyra olika triggers / procedurer man implementerat. Det &auml;r till&aring;tet att bygga en procedur / trigger som implementerar mer &auml;n en funktion exv en trigger som b&aring;de loggar och utv&auml;rderar en constraint.</li>
+            <li><strong>Minst tv&aring;</strong> av de olika typerna (typerna &auml;r bla funktioner constraints etc) ovan&nbsp; skall implementeras i de fyra olika triggers / procedurer man implementerat. Det &auml;r till&aring;tet att bygga exempelvis en procedur / trigger som implementerar mer &auml;n en funktion exv en trigger som b&aring;de loggar och utv&auml;rderar en constraint.</li>
             <li>G&ouml;r exakt en f&ouml;rklarande kommentar som &auml;r en rad l&aring;ng f&ouml;r respektive procedur / trigger enligt kodexemplet.</li>
         </ul>
     </li>
