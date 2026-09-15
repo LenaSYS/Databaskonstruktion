@@ -2,11 +2,10 @@
 
 This example shows how to show data in a form using a select query and a foreach statement. We add data into the form using the select tag.
 
-
 ### Introduction
 
 We execute a SELECT query, and iterate over the results from that query using foreach.
-We start by making a form with a <select> tag. Each select tag will represent one combo box (also known as an option box or a dropdown). 
+We start by making a form with a select tag. Each select tag will represent one combo box (also known as an option box or a dropdown). 
 
 For each of the rows returned from the query we add one option tag using the echo statement. We use $row['NAME'] to read from the NAME column in the query result.
 __Note:__ A very important feature is that we can show the __name__ in the dropdown but send __ssn__ to the response page.
