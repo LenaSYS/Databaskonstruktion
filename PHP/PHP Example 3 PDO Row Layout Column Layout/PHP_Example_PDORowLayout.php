@@ -3,7 +3,7 @@
 <table border=1>
 
 <?php
-		$pdo = new PDO('mysql:dbname=a00leifo;host=127.0.0.1;port=3306', 'root', 'kingfisher');
+		$pdo = new PDO('mysql:host=mysql;port=3306;dbname=a00leifo', 'username', 'hemligtlösen');
 		$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 		
 		// Read all customers to a table

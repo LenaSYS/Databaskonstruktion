@@ -4,7 +4,7 @@
 	
 <?php
 
-		$pdo = new PDO('mysql:dbname=a00leifo;host=127.0.0.1;port=3306', 'myusername', 'mypassword');
+		$pdo = new PDO('mysql:host=mysql;port=3306;dbname=a00leifo', 'username', 'hemligtlösen');
 	
 		if(isset($_POST['ModCustno'])){
 				$querystring='UPDATE CUSTOMER SET CUSTNO=:CUSTNO, SSN=:SSN, NAME=:NAME, REGDATE=:REGDATE WHERE CUSTNO=:MODCUSTNO;';
