@@ -7,7 +7,7 @@ This example contains shows how to connect to a database and call a procedure us
 Using pdo is very simple, a new pdo object is created. We send the credentials to pdo using a string.
 
 ```php
-		$pdo = new PDO('mysql:dbname=a00leifo;host=localhost', 'myusername', 'mypassword');
+		$pdo = new PDO('mysql:host=mysql;port=3306;dbname=a00leifo', 'username', 'hemligtlösen');
 		$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 ```
 
