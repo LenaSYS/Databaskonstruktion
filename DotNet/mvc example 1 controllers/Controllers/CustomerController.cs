@@ -15,7 +15,8 @@ namespace mvc_multiple_controllers.Controllers
 
         public IActionResult Index()
         {
-            return View(new CustomerModel(_configuration).GetAllCustomers());
+            ViewBag.SomeText = "Some other text passed from the controller using the ViewBag";
+            return View();
         }
     }
 }

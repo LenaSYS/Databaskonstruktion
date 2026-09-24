@@ -7,12 +7,10 @@ namespace mvc_multiple_controllers.Controllers
     public class HomeController : Controller
     {
         private readonly IConfiguration _configuration;
-        private CustomerModel _customersModel;
 
         public HomeController(IConfiguration configuration)
         {
             _configuration = configuration;
-            _customersModel = new CustomerModel(_configuration);
         }
 
         public IActionResult Index()
