@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Radlayout</h2>
+<table border='1'>
+    <tr>
+        <th>Customer</th>
+        <th>Invoiceno</th>
+        <th>Invoicerows</th>
+    </tr>
+    @{string prev="None";}
+    
+    @foreach (var customerRow in ViewBag.CustomerTable.Rows)
+    {
+      <tr>
+      @if (prev != customerRow["INVOICENO"].ToString())
+      {
+          <td>@customerRow["CUSTNO"]</td>
+          <td>@customerRow["INVOICENO"]</td> 
+          <td><table border='1'>
+          @foreach (var customerInnerRow in ViewBag.CustomerTable.Rows)
+          {
+              @if (customerInnerRow["INVOICENO"].ToString() == customerRow["INVOICENO"].ToString())
+              {
+                  <tr>
+                    <td>@customerInnerRow["NUMBER"]</td>
+                    <td>@customerInnerRow["PRODUCT"]</td>
+                    <td>@customerInnerRow["COMPANY"]</td>          
+                  </tr>          
+              }
+            }
+          </table></td>  
+      }
+      @{prev=customerRow["INVOICENO"].ToString();}
+      </tr>
+    }
+</table>
+
+<h2>Kolumnlayout</h2>
+<table border='1'>
+    <tr>
+        <th>Customer</th>
+        <th>Invoiceno</th>
+        <th>Invoicerows</th>
+    </tr>
+    @{prev="None";}
+    
+    @foreach (var customerRow in ViewBag.CustomerTable.Rows)
+    {
+      <tr>
+      @if (prev != customerRow["INVOICENO"].ToString())
+      {
+          <td>@customerRow["CUSTNO"]</td>
+          <td>@customerRow["INVOICENO"]</td> 
+          @foreach (var customerInnerRow in ViewBag.CustomerTable.Rows)
+          {
+              @if (customerInnerRow["INVOICENO"].ToString() == customerRow["INVOICENO"].ToString())
+              {
+                  <td><table border='1'>
+                  <tr>
+                    <td>@customerInnerRow["NUMBER"]</td>
+                    <td>@customerInnerRow["PRODUCT"]</td>
+                    <td>@customerInnerRow["COMPANY"]</td>          
+                  </tr>          
+                  </table></td>  
+              }
+            }
+      }
+      @{prev=customerRow["INVOICENO"].ToString();}
+      </tr>
+    }
+</table>
+
+<br />
