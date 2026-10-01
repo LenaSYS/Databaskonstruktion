@@ -12,7 +12,7 @@ namespace mvc_code_generated_listbox.Models
         public InvoiceModel(IConfiguration configuration)
         {
             _configuration = configuration;
-            _connectionString = _configuration["ConnectionString"];
+            _connectionString = "Server=localhost;Port=3308;Database=a00leifo;User ID=dbkonstruktion;Password=Bontebok#26;Pooling=false;SslMode=Required;convert zero datetime=True;";
         }
 
         public DataTable SearchInvoiceRows(string custno)
