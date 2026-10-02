@@ -48,5 +48,6 @@ public void InsertCustomer(string custno, string ssn, string name)
 
 The application when executed looks like this
 
-![Screenshot Before](mvc example 7 Insert A.png)
-![Screenshot After](mvc example 7 Insert B.png)
+![Screenshot Before](mvcexample7InsertA.png)
+
+![Screenshot After](mvcexample7InsertB.png)
