@@ -60,5 +60,5 @@ public void DeleteCustomer(string custno)
 
 The application when executed looks like this
 
-![Screenshot Before](mvc example 5 Action Link A.png)
-![Screenshot After](mvc example 5 Action Link B.png)
+![Screenshot Before](mvcexample5ActionLinkA.png)
+![Screenshot After](mvcexample5ActionLinkB.png)
