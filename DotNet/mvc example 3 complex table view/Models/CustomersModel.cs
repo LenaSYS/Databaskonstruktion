@@ -11,7 +11,7 @@ namespace mvc_connect_model_to_mysql.Models
         public CustomersModel(IConfiguration configuration)
         {
             _configuration = configuration;
-            connectionString = "Server=localhost;Port=3308;Database=a00leifo;User ID=dbkonstruktion;Password=Bontebok#26;Pooling=false;SslMode=Required;convert zero datetime=True;";
+            connectionString = "Server=localhost;Port=3308;Database=a00leifo;User ID=courselogin;Password=coursepassword;Pooling=false;SslMode=Required;convert zero datetime=True;";
         }
 
         public DataTable GetAllInvoices()
