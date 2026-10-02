@@ -49,5 +49,5 @@ public DataTable SearchCustomers(string name)
 
 The application when executed looks like this
 
-![Screenshot Before](mvc example 6 Search A.png)
-![Screenshot After](mvc example 6 Search B.png)
+![Screenshot Before](mvcexample6SearchA.png)
+![Screenshot After](mvcexample6SearchB.png)
