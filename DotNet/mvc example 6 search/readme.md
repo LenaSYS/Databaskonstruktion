@@ -1,5 +1,5 @@
 ### Overview
-This example shows how to make an insert using dotnet
+This example shows how to make a search form in dotnet
 
 ## View
 
