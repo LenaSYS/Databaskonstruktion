@@ -71,3 +71,19 @@ The application when executed looks like this
 
 ![Screenshot Before](mvc example 4 dropdown view A.png)
 ![Screenshot After](mvc example 5 dropdown view B.png)
+
+## Figure
+
+## Detail figures
+
+In the first figure we start execution through the default link
+1. We start in default controller "home"
+2. In the view that produces the form (index.cshtml) we use an action link to link to searchInvoiceRow function in controller add the named column as an input. (in this case custno)
+3. The searchInvoiceRow function we have an input parameter named custno
+4. InvoiceModel links to a function in the invoiceModel class that represents the invoices in the application
+5. Make SQL Query (like in PHP but with @ instead of : to denote parameters)
+6. Add parameters based on input fields from controller
+7. Process query and add content to table that we return to contoller so it can be passed to view.
+
+![Step 1 Controller](Dropdownform.png)
+
